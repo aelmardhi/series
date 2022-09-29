@@ -1,16 +1,13 @@
 const fs = require('fs');
+const Store =  require('./lib/store');
 
-loadConfigs(){
-    const Configs = [];
-    
+const store = new Store()
 
-} 
-const Configs = loadConfigs()
 
 
 switch (process.argv[2]) { //switch Command
-    case 'set':
-        
+    case 'include':
+        store.include (process.argv[3]);
         break;
 
     default:
