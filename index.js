@@ -11,6 +11,9 @@ const Store =  require('./lib/store');
         case 'include':
             store.include (process.argv[3]);
             break;
+        case 'set':
+            store.set(process.argv[3], process.argv[4]);
+            break;
 
         default:
             break;
