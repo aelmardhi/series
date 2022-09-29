@@ -17,6 +17,9 @@ const Store =  require('./lib/store');
         case 'current':
             store.current(process.argv[3]);
             break;
+        case 'next':
+            store.next(process.argv[3]);
+            break;
 
         default:
             break;
