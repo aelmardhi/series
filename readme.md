@@ -92,3 +92,6 @@ series next <name>
 
 ## Authors
 * **Abdalla Elmardhi** - [aelmardhi](https://github.com/aelmardhi)
+
+## License
+[MIT License](LICENSE) © aelmardhi
