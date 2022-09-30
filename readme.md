@@ -13,6 +13,22 @@ $ npm -v && node -v
 6.4.1
 v8.16.0
 ```
+
+## Table of Contents
+
+- [Project Name](#project-name)
+  - [Prerequisites](#prerequisites)
+  - [Table of contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Commands](#commands)
+    - [include](#include)
+    - [set](#set)
+    - [current](#current)
+    - [next](#next)
+  - [Authors](#authors)
+  - [License](#license)
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
