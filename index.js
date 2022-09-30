@@ -3,8 +3,7 @@ const Store =  require('./lib/store');
 
 (async function main(){
     const store =   new Store()
-    await store.loadConfigs()
-    console.log(store.config);
+    await store.loadConfigs();
 
 
     switch (process.argv[2]) { //switch Command
