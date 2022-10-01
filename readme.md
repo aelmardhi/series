@@ -58,7 +58,8 @@ series <command> [args]
 
 list of commands:
 
-### include
+The letter in brackets is the command shortcut.
+### include (i)
 Creates a config file in provided path, and then save it to `MAIN` config file.
 
 ```sh
@@ -68,7 +69,7 @@ series include <path>
 
 the tool will use the closest config file to store configuration data.
 
-### set
+### set (s)
 sets a path of a series, or creates a new series.
 ```sh
 series set <name> <path>
@@ -76,14 +77,14 @@ series set <name> <path>
 * `<name>` : name of a series.
 * `<path>` : path to a series folder.
 
-### current
+### current (c)
 Opens the last opend file in a series. open the first file in the series if it is the first time opend.
 ```sh
 series current <name>
 ```
 * `<name>` : name of a series.
 
-### next
+### next (n)
 Opens the next file in a series. open the first file in the series if it is the first time opend. 
 ```sh
 series next <name>
