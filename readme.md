@@ -41,15 +41,14 @@ To install and set up the tool, run:
 
 ```sh
 $ install -g https://github.com/aelmardhi/series.git
-$ cd series
 ```
 
 ## Usage
 the package will use files named `.series.config` 
 
 to use the tool run
-``` sh
-series <command> [args]
+```sh
+$ series <command> [args]
 ```
 * `<command>` : one of the commands in [Commands](#commands)
 * `[args]` : command argumnts
@@ -63,7 +62,9 @@ The letter in brackets is the command shortcut.
 Creates a config file in provided path, and then save it to `MAIN` config file.
 
 ```sh
-series include <path>
+$ series include <path>
+or
+$ series i <path>
 ```
 * `<path>` : folder path to save config file.
 
@@ -72,7 +73,9 @@ the tool will use the closest config file to store configuration data.
 ### set (s)
 sets a path of a series, or creates a new series.
 ```sh
-series set <name> <path>
+$ series set <name> <path>
+or
+$ series s <name> <path>
 ```
 * `<name>` : name of a series.
 * `<path>` : path to a series folder.
@@ -80,14 +83,18 @@ series set <name> <path>
 ### current (c)
 Opens the last opend file in a series. open the first file in the series if it is the first time opend.
 ```sh
-series current <name>
+$ series current <name>
+or
+$ series c <name>
 ```
 * `<name>` : name of a series.
 
 ### next (n)
 Opens the next file in a series. open the first file in the series if it is the first time opend. 
 ```sh
-series next <name>
+$ series next <name>
+or
+$ series n <name>
 ```
 * `<name>` : name of a series.
 
