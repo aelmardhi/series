@@ -2,6 +2,22 @@ const fs = require('fs');
 const { argv } = require('process');
 const Store =  require('./lib/store');
 
+
+const HELP_MSG = `Usage: series <COMMAND> [ARGS]
+opens files in series.
+        
+<COMMAND> could be:
+    include, i      include or create config file.
+                    Usage:  series include <PATH>
+    set, s          set a new series.
+                    Usage:  series set <NAME> <PATH>
+    current, c      open the current file in the series.
+                    Usage: series current <NAME>
+    next, n         open the next file in the series.
+                    Usage: series next <NAME>
+    help, h         shows help. shows this.
+                    Usage: series help`;
+
 (async function main(){
     const store =   new Store()
     await store.loadConfigs();
@@ -28,8 +44,10 @@ const Store =  require('./lib/store');
             if(instruction(['next', 'n'], ['<NAME>'], [process.argv[3]]))
                 store.next(process.argv[3]);
             break;
-
+        case 'help':
+        case 'h':
         default:
+            console.log(HELP_MSG);
             break;
     }
 })()
