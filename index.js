@@ -11,6 +11,8 @@ opens files in series.
                     Usage:  series include <PATH>
     set, s          set a new series.
                     Usage:  series set <NAME> <PATH>
+    reset, r        reset a series to the begining.
+                    Usage:  series reset <NAME>
     current, c      open the current file in the series.
                     Usage: series current <NAME>
     next, n         open the next file in the series.
@@ -35,6 +37,11 @@ opens files in series.
         case 's':
             if(instruction(['set', 's'], ['<NAME>','<PATH>'], [process.argv[3], process.argv[4]]))
                 store.set(process.argv[3], process.argv[4]);
+            break;
+        case 'reset':
+        case 'r':
+            if(instruction(['reset', 'r'], ['<NAME>'], [process.argv[3]]))
+                store.reset(process.argv[3]);
             break;
         case 'current':
         case 'c':
