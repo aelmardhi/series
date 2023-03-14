@@ -15,6 +15,8 @@ opens files in series.
                     Usage: series current <NAME>
     next, n         open the next file in the series.
                     Usage: series next <NAME>
+    list, l         list the names of availale serieses.
+                    Usage: series list
     help, h         shows help. shows this.
                     Usage: series help`;
 
@@ -43,6 +45,10 @@ opens files in series.
         case 'n':
             if(instruction(['next', 'n'], ['<NAME>'], [process.argv[3]]))
                 store.next(process.argv[3]);
+            break;
+        case 'list':
+        case 'l':
+            store.list();
             break;
         case 'help':
         case 'h':
