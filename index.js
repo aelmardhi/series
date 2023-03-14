@@ -13,6 +13,8 @@ opens files in series.
                     Usage:  series set <NAME> <PATH>
     reset, r        reset a series to the begining.
                     Usage:  series reset <NAME>
+    delete, d       delete a series.
+                    Usage:  series delete <NAME>
     current, c      open the current file in the series.
                     Usage: series current <NAME>
     next, n         open the next file in the series.
@@ -42,6 +44,11 @@ opens files in series.
         case 'r':
             if(instruction(['reset', 'r'], ['<NAME>'], [process.argv[3]]))
                 store.reset(process.argv[3]);
+            break;
+        case 'delete':
+        case 'd':
+            if(instruction(['delete', 'd'], ['<NAME>'], [process.argv[3]]))
+                store.delete(process.argv[3]);
             break;
         case 'current':
         case 'c':
